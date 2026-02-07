@@ -6,6 +6,7 @@
 	--accent3-color: #ffc400;
 	--accent4-color: #00c851;
 	--primary-color: #c62828;
+	--white-text-color: #ffffff;
 	--dark-text-color: #212121;
 	--gray-text-color: #b0bec5;
 	--button-padding-x: 16px;
@@ -29,4 +30,8 @@
 	font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
 	line-height: 1.5;
 	font-weight: 400;
+}
+
+html {
+	scroll-behavior: smooth;
 }

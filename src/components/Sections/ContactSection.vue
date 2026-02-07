@@ -16,7 +16,6 @@ defineProps<{
 	<section class="bg-[var(--dark-background-color)] py-20 lg:py-28" id="contact">
 		<div class="container mx-auto px-4 lg:px-8">
 			<div class="grid lg:grid-cols-2 gap-12 items-start">
-				<!-- Left -->
 				<div>
 					<h2 class="font-[var(--font-family-heading)] text-4xl sm:text-5xl text-white mb-6">
 						{{ title }}
@@ -41,7 +40,6 @@ defineProps<{
 					</div>
 				</div>
 
-				<!-- Right -->
 				<div class="bg-white rounded-2xl shadow-2xl p-8 lg:p-10">
 					<ContactForm />
 				</div>

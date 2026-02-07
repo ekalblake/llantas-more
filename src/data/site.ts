@@ -1,5 +1,14 @@
 import { reactive } from "vue";
 export const site = reactive({
+	header: {
+		logoSrc: "https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/aee85549-471c-4073-d461-7d92d0262200/public",
+		links: [
+			{ label: "Nosotros", href: "/about-us" },
+			{ label: "Productos", href: "/products" },
+			{ label: "Servicios", href: "/services" },
+		],
+		cta: { label: "Cotiza Gratis", href: "/contact" },
+	},
 	products: {
 		eyebrow: "Nuestros Productos",
 		title: "LLANTAS PARA CADA NECESIDAD",

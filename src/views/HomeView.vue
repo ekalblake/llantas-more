@@ -1,5 +1,5 @@
 <template>
-	<HeroSection></HeroSection>
+	<HeroSection :image-src="site.header.logoSrc"></HeroSection>
 	<ProductSection
 		:eyebrow="site.products.eyebrow"
 		:categories="site.products.categories"

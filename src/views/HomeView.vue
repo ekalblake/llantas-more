@@ -8,16 +8,23 @@
 	></ProductSection>
 	<ServicesSection
 		:eyebrow="site.services.eyebrow"
-		:items="site.services.items"
-		:subtitle="site.services.subtitle"
 		:title="site.services.title"
-	></ServicesSection>
+		:subtitle="site.services.subtitle"
+		:items-aros="site.services.itemsAros"
+		:items-mecanica="site.services.itemsMecanica"
+	/>
 	<AdventagesSection
 		:eyebrow="site.advantages.eyebrow"
 		:items="site.advantages.items"
 		:subtitle="site.advantages.subtitle"
 		:title="site.advantages.title"
 	></AdventagesSection>
+	<BrandSection
+		:eyebrow="site.brands.eyebrow"
+		:items="site.brands.items"
+		:subtitle="site.brands.subtitle"
+		:title="site.brands.title"
+	></BrandSection>
 	<ContactSection
 		:info-cards="site.contact.infoCards"
 		:whatsapp-href="site.contact.whatsappHref"
@@ -32,5 +39,6 @@ import ProductSection from "../components/Sections/ProductsSection.vue";
 import ServicesSection from "../components/Sections/ServicesSection.vue";
 import AdventagesSection from "../components/Sections/AdventagesSection.vue";
 import ContactSection from "../components/Sections/ContactSection.vue";
+import BrandSection from "../components/Sections/BrandSection.vue";
 </script>
 <style></style>

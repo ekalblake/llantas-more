@@ -9,12 +9,11 @@ defineProps<{
 }>();
 
 const links: NavLink[] = reactive([
-	{ label: "Nosotros", href: "/about-us" },
-	{ label: "Productos", href: "/products" },
-	{ label: "Servicios", href: "/services" },
+	{ label: "Productos", href: "#products" },
+	{ label: "Servicios", href: "#services" },
 ]);
 
-const cta: Cta = reactive({ label: "Cotiza Gratis", href: "/contact" });
+const cta: Cta = reactive({ label: "Cotiza Gratis", href: "#contact" });
 
 const isOpen = ref<boolean>(false);
 </script>
@@ -24,7 +23,7 @@ const isOpen = ref<boolean>(false);
 		<nav class="container mx-auto px-4 lg:px-8">
 			<div class="flex items-center justify-between">
 				<a href="/" class="flex-shrink-0">
-					<img src="../assets/logo.png" alt="Logo" class="h-28 py-2 w-auto" />
+					<img src="../assets/logo_more.png" alt="Logo" class="h-28 py-2 w-auto" />
 				</a>
 
 				<div class="hidden lg:flex items-center space-x-8">

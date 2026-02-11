@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import SectionHeader from "../ui/SectionHeader.vue";
-import CategoryCard from "../ui/CategoryCard.vue";
+import SectionHeader from "../SectionHeader.vue";
+import CategoryCard from "./CategoryCard.vue";
 
 type Category = {
 	badge?: string;

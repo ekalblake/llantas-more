@@ -8,7 +8,7 @@
 				<!-- Company Info -->
 				<div class="lg:col-span-1">
 					<a href="/" class="inline-block mb-6">
-						<img src="../assets/logo.png" alt="LLantax Logo" class="h-20 w-auto" data-logo="" />
+						<img src="../assets/logo_more.png" alt="LLantax Logo" class="h-20 w-auto" data-logo="" />
 					</a>
 					<p class="text-[var(--gray-text-color)] mb-6 leading-relaxed">
 						Expertos en llantas y servicios automotrices con más de 10 años de experiencia. Tu seguridad es

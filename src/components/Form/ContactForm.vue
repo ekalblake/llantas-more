@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import { reactive } from "vue";
+import { useCart } from "../../composables/useCart";
+
+const cart = useCart();
 
 const form = reactive({
 	name: "",
@@ -24,10 +27,18 @@ const onSubmit = () => {
 			tipoTexto = "llantas";
 	}
 
-	const message = `Hola, me gustaría cotizar ${tipoTexto}.%0A%0ANombre: ${form.name}%0AMensaje: ${form.message}`;
+	const cartText = cart.toWhatsAppText();
+
+	const message =
+		`Hola, me gustaría cotizar ${tipoTexto}.%0A%0A` +
+		`Nombre: ${form.name}%0A` +
+		`Mensaje: ${form.message}%0A%0A` +
+		cartText;
 
 	const whatsappUrl = `https://wa.me/51968736364?text=${message}`;
 	window.open(whatsappUrl, "_blank");
+
+	cart.clear();
 };
 </script>
 <template>

@@ -25,6 +25,12 @@
 		:subtitle="site.brands.subtitle"
 		:title="site.brands.title"
 	></BrandSection>
+	<CatalogSection
+		:categories="catalog.categories"
+		:eyebrow="catalog.eyebrow"
+		:title="catalog.title"
+		:subtitle="catalog.subtitle"
+	/>
 	<ContactSection
 		:info-cards="site.contact.infoCards"
 		:whatsapp-href="site.contact.whatsappHref"
@@ -34,11 +40,13 @@
 </template>
 <script lang="ts" setup>
 import { site } from "../data/site";
+import { catalog } from "../data/catalog-items";
 import HeroSection from "../components/Sections/HeroSection.vue";
 import ProductSection from "../components/Sections/ProductsSection.vue";
 import ServicesSection from "../components/Sections/ServicesSection.vue";
 import AdventagesSection from "../components/Sections/AdventagesSection.vue";
 import ContactSection from "../components/Sections/ContactSection.vue";
 import BrandSection from "../components/Sections/BrandSection.vue";
+import CatalogSection from "../components/Sections/CatalogSection.vue";
 </script>
 <style></style>

@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import { onMounted, onBeforeUnmount, ref } from "vue";
+import { onMounted, onBeforeUnmount, ref, computed, nextTick } from "vue";
+import { gsap } from "gsap";
+
 import SectionHeader from "../SectionHeader.vue";
 import BrandCard from "../Cards/BrandCard.vue";
 
@@ -12,40 +14,33 @@ const props = defineProps<{
 	items: BrandItem[];
 }>();
 
-const trackRef = ref<HTMLDivElement | null>(null);
-let timer: number | null = null;
+const duplicatedItems = computed(() => [...props.items, ...props.items]);
 
-const scrollOne = (dir: 1 | -1) => {
-	const el = trackRef.value;
-	if (!el) return;
+const viewportRef = ref<HTMLDivElement | null>(null);
+const trackInnerRef = ref<HTMLDivElement | null>(null);
 
-	const first = el.querySelector<HTMLElement>(".snap-start");
-	const slideWidth = first ? first.offsetWidth : 240;
-	const maxScroll = el.scrollWidth - el.clientWidth;
+let tween: gsap.core.Tween | null = null;
 
-	if (dir === 1) {
-		if (el.scrollLeft + slideWidth >= maxScroll) {
-			el.scrollTo({ left: 0, behavior: "smooth" });
-		} else {
-			el.scrollBy({ left: slideWidth + 24, behavior: "smooth" });
-		}
-	}
+onMounted(async () => {
+	await nextTick();
 
-	if (dir === -1) {
-		if (el.scrollLeft <= 0) {
-			el.scrollTo({ left: maxScroll, behavior: "smooth" });
-		} else {
-			el.scrollBy({ left: -(slideWidth + 24), behavior: "smooth" });
-		}
-	}
-};
+	const viewport = viewportRef.value;
+	const track = trackInnerRef.value;
+	if (!viewport || !track) return;
 
-onMounted(() => {
-	timer = window.setInterval(() => scrollOne(1), 5000);
+	const loopWidth = track.scrollWidth / 2;
+
+	tween = gsap.to(track, {
+		x: -loopWidth,
+		duration: 15,
+		ease: "none",
+		repeat: -1,
+	});
 });
 
 onBeforeUnmount(() => {
-	if (timer) window.clearInterval(timer);
+	tween?.kill();
+	tween = null;
 });
 </script>
 
@@ -53,35 +48,16 @@ onBeforeUnmount(() => {
 	<section id="brands" class="bg-[var(--light-background-color)] py-20 lg:py-28">
 		<div class="container mx-auto px-4 lg:px-8">
 			<SectionHeader icon="fa-award" :eyebrow="eyebrow" :title="title" :subtitle="subtitle" />
-
 			<div class="relative mt-10">
-				<button
-					type="button"
-					class="cursor-pointer hidden sm:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-3 z-10 w-10 h-10 rounded-full bg-white shadow-lg border border-[var(--light-border-color)] items-center justify-center hover:scale-105 transition"
-					@click="scrollOne(-1)"
-				>
-					<span aria-hidden="true">‹</span>
-				</button>
-
-				<button
-					type="button"
-					class="cursor-pointer hidden sm:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-3 z-10 w-10 h-10 rounded-full bg-white shadow-lg border border-[var(--light-border-color)] items-center justify-center hover:scale-105 transition"
-					@click="scrollOne(1)"
-				>
-					<span aria-hidden="true">›</span>
-				</button>
-
-				<div
-					ref="trackRef"
-					class="flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-2 [-ms-overflow-style:none] [scrollbar-width:none]"
-				>
-					<div
-						v-for="(b, idx) in items"
-						:key="b.name"
-						class="snap-start shrink-0 w-[220px] sm:w-[240px]"
-						:data-slide="idx === 0 ? '1' : '0'"
-					>
-						<BrandCard :item="b" />
+				<div ref="viewportRef" class="overflow-hidden">
+					<div ref="trackInnerRef" class="flex gap-4 will-change-transform">
+						<div
+							v-for="(b, idx) in duplicatedItems"
+							:key="idx + '-' + b.name"
+							class="shrink-0 w-[220px] sm:w-[240px]"
+						>
+							<BrandCard :item="b" />
+						</div>
 					</div>
 				</div>
 			</div>

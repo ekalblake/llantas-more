@@ -127,7 +127,7 @@ export const site = reactive({
 			{ name: "Pirelli", logoSrc: new URL("../assets/brands/pirelli.png", import.meta.url).href },
 			{ name: "Hankook", logoSrc: new URL("../assets/brands/hankook.png", import.meta.url).href },
 			{ name: "Yokohama", logoSrc: new URL("../assets/brands/yokohama.png", import.meta.url).href },
-			{ name: "Giti", logoSrc: new URL("../assets/brands/giti.jpg", import.meta.url).href },
+			{ name: "Giti", logoSrc: new URL("../assets/brands/giti.png", import.meta.url).href },
 			{ name: "Sailun", logoSrc: new URL("../assets/brands/sailun.png", import.meta.url).href },
 		],
 	},

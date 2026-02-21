@@ -1,5 +1,9 @@
 import { reactive, computed } from "vue";
 
+import { useToast } from "./useToast";
+
+const toast = useToast();
+
 export type CatalogItem = {
 	id: string;
 	name: string;
@@ -22,21 +26,24 @@ function add(item: CatalogItem) {
 	const found = state.lines.find((l) => l.item.id === item.id);
 	if (found) found.qty += 1;
 	else state.lines.push({ item, qty: 1 });
+
+	toast.show(`✅ ${item.name} agregado`);
 }
 
 function remove(itemId: string) {
-	state.lines = state.lines.filter((l) => l.item.id !== itemId);
+	const idx = state.lines.findIndex((l) => l.item.id === itemId);
+	if (idx !== -1) state.lines.splice(idx, 1);
 }
 
 function dec(itemId: string) {
-	const found = state.lines.find((l) => l.item.id === itemId);
+	const found = state.lines.find((l) => l.item.id == itemId);
 	if (!found) return;
 	found.qty -= 1;
 	if (found.qty <= 0) remove(itemId);
 }
 
 function clear() {
-	state.lines = [];
+	state.lines.splice(0, state.lines.length);
 }
 
 const count = computed(() => state.lines.reduce((acc, l) => acc + l.qty, 0));
@@ -61,6 +68,5 @@ export function useCart() {
 		clear,
 		count,
 		toWhatsAppText,
-		
 	};
 }

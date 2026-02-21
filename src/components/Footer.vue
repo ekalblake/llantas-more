@@ -3,9 +3,7 @@
 <template>
 	<footer id="global-footer" class="code-section bg-[var(--dark-background-color)] text-white pt-16 pb-8">
 		<div class="container mx-auto px-4 lg:px-8">
-			<!-- Main Footer Content -->
 			<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
-				<!-- Company Info -->
 				<div class="lg:col-span-1">
 					<a href="/" class="inline-block mb-6">
 						<img src="../assets/logo_more.png" alt="LLantax Logo" class="h-20 w-auto" data-logo="" />

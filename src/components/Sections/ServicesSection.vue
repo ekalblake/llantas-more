@@ -9,7 +9,6 @@ defineProps<{
 	title: string;
 	subtitle: string;
 
-	// 👇 nuevo: 2 listas (sin cambiar tu estilo)
 	itemsAros: ServiceItem[];
 	itemsMecanica: ServiceItem[];
 }>();

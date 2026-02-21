@@ -7,6 +7,7 @@ defineProps<{
 		href: string;
 		bullets: string[];
 	};
+	href?: string;
 }>();
 </script>
 
@@ -42,6 +43,7 @@ defineProps<{
 			</ul>
 
 			<a
+				:href="href || '#catalog'"
 				class="cursor-pointer block text-center bg-[var(--dark-background-color)] text-white px-6 py-3 rounded-lg font-bold hover:bg-[var(--primary-color)] transition-all duration-300 group-hover:shadow-lg"
 			>
 				Ver Opciones <i class="fas fa-arrow-right ml-2"></i>

@@ -1,33 +1,48 @@
 @import "tailwindcss";
 
 :root {
-	--accent-color: #ff3d00;
-	--accent2-color: #ff9100;
-	--accent3-color: #ffc400;
-	--accent4-color: #00c851;
-	--primary-color: #c62828;
+	/* Brand */
+	--primary-color: #d61f26; /* rojo brand (CTA, highlights) */
+	--primary-button-hover-bg-color: #b5161c;
+
+	--accent-color: #ffb300; /* ámbar (detalles, badges) */
+	--accent2-color: #ff6d00; /* naranja (hover/gradients) */
+	--accent3-color: #ffd54f; /* ámbar claro (fondos suaves) */
+	--accent4-color: #22c55e; /* verde (success / garantía) */
+
+	/* Text */
 	--white-text-color: #ffffff;
-	--dark-text-color: #212121;
-	--gray-text-color: #b0bec5;
-	--button-padding-x: 16px;
-	--button-padding-y: 8px;
-	--font-family-body: Roboto;
-	--light-text-color: #fafafa;
-	--dark-border-color: #424242;
-	--light-border-color: #e0e0e0;
-	--font-family-heading: Bebas Neue;
-	--button-rounded-radius: 8px;
-	--dark-background-color: #263238;
-	--light-background-color: #fce0e0;
-	--medium-background-color: #f6c6c6;
+	--dark-text-color: #111827; /* slate-900 */
+	--gray-text-color: #6b7280; /* gray-500 */
+	--light-text-color: #f9fafb; /* near white */
+
+	/* Backgrounds */
+	--dark-background-color: #0b0f14; /* negro con tinte azulado (más pro) */
+	--light-background-color: #fff4cc; /* crema cálido (no amarillo fosfo) */
+	--medium-background-color: #ffe7b3; /* sección intermedia */
+
+	/* Borders */
+	--dark-border-color: #1f2937; /* gray-800 */
+	--light-border-color: #e5e7eb; /* gray-200 */
+
+	/* Buttons */
 	--primary-button-text-color: #ffffff;
-	--secondary-button-bg-color: #37474f;
+	--secondary-button-bg-color: #111827; /* dark slate */
 	--secondary-button-text-color: #ffffff;
-	--primary-button-hover-bg-color: #b71c1c;
-	--primary-button-hover-text-color: #ffffff;
-	--secondary-button-hover-bg-color: #263238;
+	--secondary-button-hover-bg-color: #0b0f14;
 	--secondary-button-hover-text-color: #ffffff;
-	font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+	/* Typography */
+	--font-family-body:
+		ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji",
+		"Segoe UI Emoji";
+	--font-family-heading: "Bebas Neue", ui-sans-serif;
+
+	/* UI */
+	--button-rounded-radius: 12px;
+	--button-padding-x: 16px;
+	--button-padding-y: 10px;
+
 	line-height: 1.5;
 	font-weight: 400;
 }

@@ -13,6 +13,8 @@ export type CatalogItem = {
 	categoryKey?: string;
 	image?: string;
 	diameter?: number;
+	page?: number;
+	slot?: number;
 };
 
 type CartLine = {

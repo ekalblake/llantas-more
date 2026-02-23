@@ -9,11 +9,11 @@ defineProps<{
 
 <template>
 	<div
-		class="flex flex-col bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6 border border-[var(--light-border-color)] hover:border-[var(--primary-color)] min-h-[410px]"
+		class="flex flex-col bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6 border border-[var(--light-border-color)] hover:border-[var(--primary-color)] min-h-[480px]"
 	>
 		<div class="rounded-xl overflow-hidden bg-[var(--medium-background-color)] mb-4">
-			<img v-if="item.image" :src="item.image" :alt="item.name" class="w-full h-44 object-cover" loading="lazy" />
-			<div v-else class="h-44 flex items-center justify-center text-sm text-[var(--gray-text-color)]">
+			<img v-if="item.image" :src="item.image" :alt="item.name" class="w-full h-50 object-cover" loading="lazy" />
+			<div v-else class="h-50 flex items-center justify-center text-sm text-[var(--gray-text-color)]">
 				Imagen pendiente
 			</div>
 		</div>
@@ -24,6 +24,9 @@ defineProps<{
 
 		<p v-if="item.specs?.length" class="text-sm text-[var(--gray-text-color)] mb-4">
 			{{ item.specs.join(" • ") }}
+		</p>
+		<p v-if="item.description" class="text-sm text-[var(--gray-text-color)] mb-4">
+			{{ item.description }}
 		</p>
 
 		<button

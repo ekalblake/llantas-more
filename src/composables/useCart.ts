@@ -9,6 +9,7 @@ export type CatalogItem = {
 	name: string;
 	brand?: string;
 	specs?: string[];
+	description: string;
 	categoryKey?: string;
 	image?: string;
 };

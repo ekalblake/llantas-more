@@ -9,9 +9,11 @@ type CatalogItem = {
 	name: string;
 	brand?: string;
 	specs?: string[];
-	description: string;
+	description?: string;
 	image?: string;
 	diameter?: number;
+	page?: number;
+	slot?: number;
 };
 
 export type Category = {

@@ -9,7 +9,7 @@ export type CatalogItem = {
 	name: string;
 	brand?: string;
 	specs?: string[];
-	description: string;
+	description?: string;
 	categoryKey?: string;
 	image?: string;
 	diameter?: number;

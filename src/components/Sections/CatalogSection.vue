@@ -3,18 +3,7 @@ import SectionHeader from "../SectionHeader.vue";
 import CatalogCard from "../Cards/CatalogCard.vue";
 import { useCart } from "../../composables/useCart";
 import { reactive } from "vue";
-
-type CatalogItem = {
-	id: string;
-	name: string;
-	brand?: string;
-	specs?: string[];
-	description?: string;
-	image?: string;
-	diameter?: number;
-	page?: number;
-	slot?: number;
-};
+import type { CatalogItem } from "../../composables/useCart";
 
 export type Category = {
 	key: string;

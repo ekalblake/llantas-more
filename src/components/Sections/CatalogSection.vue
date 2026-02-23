@@ -11,6 +11,7 @@ type CatalogItem = {
 	specs?: string[];
 	description: string;
 	image?: string;
+	diameter?: number;
 };
 
 export type Category = {

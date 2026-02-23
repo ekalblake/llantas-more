@@ -4,6 +4,7 @@ interface Catalog {
 	eyebrow: string;
 	title: string;
 	subtitle: string;
+	diameter?: number;
 	categories: Category[];
 }
 

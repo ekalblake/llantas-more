@@ -2,6 +2,9 @@
 import { useCart } from "../../composables/useCart";
 import ContactInfoCard from "../Cards/ContactInfoCard.vue";
 import ContactForm from "../Form/ContactForm.vue";
+import { ref, onBeforeUnmount, onMounted } from "vue";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 type InfoCard = { icon: string; label: string; value: string };
 
@@ -13,6 +16,34 @@ defineProps<{
 }>();
 
 const cart = useCart();
+
+gsap.registerPlugin(ScrollTrigger);
+
+const contact = ref<HTMLElement | null>(null);
+
+let ctx: gsap.Context | null = null;
+
+onMounted(() => {
+	ctx = gsap.context(() => {
+		gsap.from(".reveal", {
+			opacity: 0,
+			y: 20,
+			duration: 0.6,
+			stagger: 0.08,
+			ease: "power2.out",
+			scrollTrigger: {
+				trigger: ".reveal-wrap",
+				start: "top 80%",
+				once: true,
+			},
+		});
+	}, contact);
+});
+
+onBeforeUnmount(() => {
+	ctx?.revert();
+	ctx = null;
+});
 </script>
 
 <template>

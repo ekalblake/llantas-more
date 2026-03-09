@@ -144,6 +144,11 @@ export const site = reactive({
 				label: "Visítanos",
 				value: "Av Defensores del Morro (Huaylas) Nro 2615 - Urb. Santa Leonor",
 			},
+			{
+				icon: "fa-map-marker-alt",
+				label: "Visítanos",
+				value: "Av Guardia Civil 574 - C2 - Urb. La Campiña",
+			},
 		],
 	},
 });

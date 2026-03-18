@@ -1718,43 +1718,85 @@ export const catalog: Catalog = {
 					id: "camionetas-16-bc6274-black-mf",
 					name: "BC6274 BLACK MF",
 					specs: ["16*8.0", "6*139.7", "ET 0", "CB 110"],
-					description: "",
+					description:
+						"Aro color negro brillante/ 8 brazos pulidos/borde frontal negro con detalles plateados.",
 					image: new URL("../assets/catalogo/16-cam/camionetas-16-bc6274-black-mf.png", import.meta.url).href,
 				},
 				{
 					id: "camionetas-16-bc6079-black-mf",
 					name: "BC6079 BLACK MF",
 					specs: ["16*8.0", "6*139.7", "ET 0", "CB 106.1"],
-					description: "",
+					description: "Aro color negro brillante/ 8 brazos negros con contraste pulido",
 					image: new URL("../assets/catalogo/16-cam/camionetas-16-bc6079-black-mf.png", import.meta.url).href,
 				},
 				{
 					id: "camionetas-16-bc6306-black-mf",
 					name: "BC6306 BLACK MF",
 					specs: ["16*7.5", "6*139.7", "ET 15", "CB 106.1"],
-					description: "",
+					description:
+						"Aro color negro brillante/ 6 brazos dobles negros con contraste pulido/pestaña frontal pulida.",
 					image: new URL("../assets/catalogo/16-cam/camionetas-16-bc6306-black-mf.png", import.meta.url).href,
 				},
 				{
 					id: "camionetas-16-z1041-b4",
 					name: "Z1041 B4",
 					specs: ["16*8.0", "6*139.7", "ET 0", "CB 110"],
-					description: "",
+					description: "Aro color negro brillante/ 10 brazos/pestaña pulida con detalles negros",
 					image: new URL("../assets/catalogo/16-cam/camionetas-16-z1041-b4.png", import.meta.url).href,
 				},
 				{
 					id: "camionetas-16-dm-661",
 					name: "DM-661",
 					specs: ["16*8.5", "6*139.7", "ET 0", "CB 110"],
-					description: "",
+					description: "Aro color negro matte/ brazos multiples/pestaña frontal con detalle de tuercas.",
 					image: new URL("../assets/catalogo/16-cam/camionetas-16-dm-661.png", import.meta.url).href,
 				},
 				{
 					id: "camionetas-z339-b4-q",
 					name: "Z338 B4-Q",
 					specs: ["16*8.0", "6*139.7", "ET 6", "CB 110"],
-					description: "",
+					description:
+						"Aro color negro brillante/ 8 brazos/pestaña frontal pulida con detalles negros y tuercas.",
 					image: new URL("../assets/catalogo/16-cam/camionetas-z339-b4-q.png", import.meta.url).href,
+				},
+				{
+					id: "camionetas-16-z1006-b3-q",
+					name: "Z1006 B3-Q",
+					specs: ["16*8.0", "6*139.7", "ET 0", "CB 110"],
+					description:
+						"Aro color negro brillante/ detalles metálicos pulidos/ diseño de múltiples orificios circulares alrededor de su estructura.",
+					image: new URL("../assets/catalogo/16-cam/camionetas-16-z1006-b3-q.png", import.meta.url).href,
+				},
+				{
+					id: "camionetas-16-z0136-b2",
+					name: "Z0136 B2",
+					specs: ["16*8.0", "6*139.7", "ET 0", "CB 110"],
+					description: "Aro color negro brillante/ 6 brazos y pestaña frontal con detallespulidos y tuercas.",
+					image: new URL("../assets/catalogo/16-cam/camionetas-16-z0136-b2.png", import.meta.url).href,
+				},
+				{
+					id: "camionetas-16-bc6975-black-mf",
+					name: "BC6975 BLACK MF",
+					specs: ["16*8.0", "6*114.3", "ET 0", "CB 66.1"],
+					description:
+						"Aro color negro brillante/ 6 brazos dobles pulidos/ borde frontal pulido con detalle de tuercas.",
+					image: new URL("../assets/catalogo/16-cam/camionetas-16-bc6975-black-mf.png", import.meta.url).href,
+				},
+				{
+					id: "camionetas-16-var-8708-tp-1451-bfp",
+					name: "VAR-8708-TP-1451 BFP",
+					specs: ["16*8.0", "6*114.3", "ET 3", "CB 66.1"],
+					description: "",
+					image: new URL("../assets/catalogo/16-cam/camionetas-16-var-8708-tp-1451-bfp.png", import.meta.url)
+						.href,
+				},
+				{
+					id: "camionetas-16-var-8708-tp-1446-bfp",
+					name: "VAR-8708-TP-1446 BFP",
+					specs: ["16*7.5", "6*114.3", "ET 30", "CB 66.1"],
+					description: "",
+					image: new URL("../assets/catalogo/16-cam/camionetas-16-var-8708-tp-1446-bfp.png", import.meta.url)
+						.href,
 				},
 			],
 		},

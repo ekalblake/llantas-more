@@ -4,5 +4,5 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
 	plugins: [vue(), tailwindcss()],
-	base: "/llantas-more/",
+	base: process.env.VITE_BASE_PATH || "/llantas-more/",
 });

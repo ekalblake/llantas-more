@@ -562,14 +562,6 @@ export const catalog: Catalog = {
 					description: "Aro color negro/ 10 brazos dobles pulidos",
 					image: new URL("../assets/catalogo/17/autos-17-z537-b1-m5.png", import.meta.url).href,
 				},
-				{
-					id: "autos-17-604-black-machine-lip-gold-lip",
-					name: "604 BLACK MACHINE LIP(GOLD LIP)",
-					specs: ["17*8.0", "5*114.3", "ET 40", "CB 73.1"],
-					description: "Aro color negro/ 15 brazos pulidos/pestaña amplia dorada",
-					image: new URL("../assets/catalogo/17/autos-17-604-black-machine-lip-gold-lip.png", import.meta.url)
-						.href,
-				},
 			],
 		},
 		{

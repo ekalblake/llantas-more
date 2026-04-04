@@ -130,6 +130,27 @@ export const site = reactive({
 			{ name: "Giti", logoSrc: new URL("../assets/brands/giti.png", import.meta.url).href },
 			{ name: "Sailun", logoSrc: new URL("../assets/brands/sailun.png", import.meta.url).href },
 		],
+		cartItems: [
+			{ name: "dunlop-1", logoSrc: new URL("../assets/cart-items/dunlop-1.jpeg", import.meta.url).href },
+			{ name: "dunlop-2", logoSrc: new URL("../assets/cart-items/dunlop-2.jpeg", import.meta.url).href },
+			{ name: "falken-1", logoSrc: new URL("../assets/cart-items/falken-1.jpeg", import.meta.url).href },
+			{ name: "falken-2", logoSrc: new URL("../assets/cart-items/falken-2.jpeg", import.meta.url).href },
+			{ name: "gtradial-1", logoSrc: new URL("../assets/cart-items/gtradial-1.jpeg", import.meta.url).href },
+			{ name: "kumho-tire-1", logoSrc: new URL("../assets/cart-items/kumho-tire-1.jpeg", import.meta.url).href },
+			{ name: "kumho-tire-2", logoSrc: new URL("../assets/cart-items/kumho-tire-2.jpeg", import.meta.url).href },
+			{ name: "kumho-tire-3", logoSrc: new URL("../assets/cart-items/kumho-tire-3.jpeg", import.meta.url).href },
+			{
+				name: "marshal-tire-1",
+				logoSrc: new URL("../assets/cart-items/marshal-tire-1.jpeg", import.meta.url).href,
+			},
+			{ name: "pirelli-1", logoSrc: new URL("../assets/cart-items/pirelli-1.jpeg", import.meta.url).href },
+			{
+				name: "triangle-tire-1",
+				logoSrc: new URL("../assets/cart-items/triangle-tire-1.jpeg", import.meta.url).href,
+			},
+			{ name: "west-lake-1", logoSrc: new URL("../assets/cart-items/west-lake-1.jpeg", import.meta.url).href },
+			{ name: "west-lake-2", logoSrc: new URL("../assets/cart-items/west-lake-2.jpeg", import.meta.url).href },
+		],
 	},
 
 	contact: {

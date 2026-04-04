@@ -23,6 +23,7 @@
 		:eyebrow="site.brands.eyebrow"
 		:items="site.brands.items"
 		:subtitle="site.brands.subtitle"
+		:car-items="site.brands.cartItems"
 		:title="site.brands.title"
 	></BrandSection>
 	<CatalogSection

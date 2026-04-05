@@ -68,6 +68,8 @@ onMounted(async () => {
 onBeforeUnmount(() => {
 	tween?.kill();
 	tween = null;
+	tweenCart?.kill();
+	tweenCart = null;
 });
 </script>
 
